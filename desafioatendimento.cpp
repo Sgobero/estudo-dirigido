@@ -2,19 +2,26 @@
 #include<vector>
 #include<iomanip>
 #include<stdlib.h>
+#include <locale.h>
 
 using namespace std;
 
 int main(){
 
-
+    setlocale(LC_ALL, "Portuguese");
     int valor;
     vector <int> lista;
     double media = 0;
+    double media1 = 0;
 
     string decisao;
     int opcao;
-    int soma = 0;
+    double soma = 0;
+    double soma1 = 0, soma2 = 0, soma3 = 0;
+    double cont;
+    double total = 0;
+    double cont3;
+    double contvezes = 0;
 
 
 
@@ -45,7 +52,7 @@ int main(){
 
         cin >> opcao;
 
-        system("clear");
+        //system("clear");
 
         //estrutura para modularizar a aplicação
         switch(opcao){
@@ -53,10 +60,12 @@ int main(){
 
         case 1:
 
+            soma1 = 0;
+
         cout << "A opção escolhida foi: imprimir o somatório" << endl;
 
-        for( int cont = 0 ; cont < lista.size() ; cont++){
-            soma += lista[cont];
+        for( int cont1 = 0 ; cont1 < lista.size() ; cont1++){
+            soma1 += lista[cont1];
         }
 
         cout << endl;
@@ -66,7 +75,7 @@ int main(){
         cout << endl;
 
         cout << "*------------------------------------------------*" <<endl;
-        cout << "A soma dos elementos digitados é: " << soma << endl;
+        cout << "A soma dos elementos digitados é: " << soma1 << endl;
 
         cout << endl;
         cout << endl;
@@ -77,40 +86,97 @@ int main(){
 
         break;
 
+        //----------------------------------------------------------------------
+
         case 2:
 
+        soma = 0;
 
         cout <<fixed <<setprecision(1);
         cout << "imprimir a média" << endl;
 
-            for(int cont = 0 ; cont < lista.size() ; cont ++){
-                media = soma / cont;
+            for(cont = 0 ; cont < lista.size() ; cont++){
+                soma += lista[cont];
             }
+
+                media = soma / cont;
+
 
         cout << "A média dos elementos digitados é: " <<media <<endl;
 
         break;
 
-
+        //--------------------------------------------------------------------
 
         case 3:
 
+            for( int cont1 = 0 ; cont1 < lista.size() ; cont1++){
+            soma2 += lista[cont1];
+        }
+
+            for(cont = 0 ; cont < lista.size() ; cont++){
+            soma3 += lista[cont];
+        }
+
+                media1 = soma3 / cont;
+
+        cout << "*------------------------------------------------*" <<endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
         cout << "A media e o somatório dos elementos digitados sao: " <<endl;
-
-        cout << "Média: " <<media;
-        cout << "Somatório: " <<soma;
-
+        cout << "Média: " <<media1 <<endl;
+        cout << "Somatório: " <<soma2 <<endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << "*------------------------------------------------*" <<endl;
 
         break;
 
+        //---------------------------------------------------------------------------------
+
+        case 4:
+
+
+            for(cont3 = 0 ; cont3 < lista.size() ; cont3++){
+                if (lista[cont3] >= 0){
+                    total = total + lista[cont3];
+                    contvezes++;
+                }
         }
+            total = total / contvezes;
+
+        cout << "*------------------------------------------------*" <<endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << "Todos os valores negativos foram substituidos por zero." <<endl;
+        cout << "Sua média ficou: " <<total <<endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << "*------------------------------------------------*" <<endl;
+
+
+
+        break;
+        }
+
 
     } while(opcao != 0);
 
 
     cout << "MUITO OBRIGADO";
 
-
+    system("pause");
     return 0;
 }
-
