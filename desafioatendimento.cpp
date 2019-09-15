@@ -3,6 +3,7 @@
 #include<iomanip>
 #include<stdlib.h>
 #include <locale.h>
+#include<algorithm>
 
 using namespace std;
 
@@ -110,6 +111,10 @@ int main(){
 
         case 3:
 
+            media1 = 0;
+            soma2 = 0;
+            soma3 = 0;
+
             for( int cont1 = 0 ; cont1 < lista.size() ; cont1++){
             soma2 += lista[cont1];
         }
@@ -142,14 +147,15 @@ int main(){
 
         case 4:
 
+            total = 0;
+            cont3 = 0;
 
             for(cont3 = 0 ; cont3 < lista.size() ; cont3++){
                 if (lista[cont3] >= 0){
                     total = total + lista[cont3];
-                    contvezes++;
                 }
         }
-            total = total / contvezes;
+            total = total / cont3;
 
         cout << "*------------------------------------------------*" <<endl;
         cout << endl;
@@ -169,13 +175,52 @@ int main(){
 
 
         break;
-        }
 
+
+        case 6:
+
+        cout << "*------------------------------------------------*" <<endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << " A ordem de todos os elementos digitados é: " <<endl;
+
+            for(double contador = 0 ; contador < lista.size() ; contador ++){
+                    cout << contador + 1 <<"º: " << lista[contador] <<endl;
+
+            }
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << "*------------------------------------------------*" <<endl;
+
+
+
+        break;
+
+
+        }
 
     } while(opcao != 0);
 
+        cout << "*------------------------------------------------*" <<endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << "OBRIGADO POR USAR O PROGRAMA! VOLTE SEMPRE!" <<endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << "*------------------------------------------------*" <<endl;
 
-    cout << "MUITO OBRIGADO";
 
     system("pause");
     return 0;
