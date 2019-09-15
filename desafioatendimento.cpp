@@ -213,7 +213,7 @@ int main(){
         cout << endl;
         cout << endl;
         cout << endl;
-        cout << "OBRIGADO POR USAR O PROGRAMA! VOLTE SEMPRE!" <<endl;
+        cout << "OBRIGADO POR USAR O PROGRAMA! VOLTE SEMPRE!!" <<endl;
         cout << endl;
         cout << endl;
         cout << endl;
