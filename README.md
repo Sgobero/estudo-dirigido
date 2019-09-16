@@ -1,4 +1,5 @@
-# estudo-dirigido
+# estudo-dirigido 1 
 
-o tal do codigo do desafio
-hm
+  O PROGRAMA POSSUI 2 OPÇÕES :P
+
+
