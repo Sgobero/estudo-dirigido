@@ -30,28 +30,25 @@ int main(){
 
 
 
+    cout << "Seja bem vindo(a) ao programa do Laurentino e Sgobero!!!" <<endl <<endl;
+    cout << "Para iniciar, ";
     do{
 
         //algoritmo pra completar a lista
-        cout << "Digite um valor: ";
+        cout << "Digite um valor: " <<endl;
         cin >> valor;
-
         lista.push_back(valor);
         listacase5.push_back(valor);
-
-        cout << "Deseja sair? (s ou n): " <<endl;
+        cout << endl;
+        cout << "Deseja parar de digitar? Digite *p* para parar ou *c* para continuar digitando: " <<endl;
         cin >> decisao;
 
-    } while(decisao != "s");
+    } while(decisao != "p");
 
-    /*for (int x = 0; x < lista.size(); x++){
-        listacase5[x] = lista[x];
-    }
-    */
+        cout << endl;
+        cout << "*------------------------------------------------*" <<endl;
 
     do {
-
-
         cout << "Digite [0] para sair da aplicação" <<endl;
         cout << "Digite [1] para imprimir o somatório de seus elementos" <<endl;
         cout << "Digite [2] para imprimir a média de seus elementos" <<endl;
@@ -59,7 +56,6 @@ int main(){
         cout << "Digite [4] substituir por zero todos os valores negativos e imprimir a média" <<endl;
         cout << "Digite [5] para substituir por zero todos os valores repetidos e imprimir a média e o somatório" <<endl;
         cout << "Digite [6] mostrar o vetor ordenado" <<endl;
-
         cin >> opcao;
 
         //system("clear");
