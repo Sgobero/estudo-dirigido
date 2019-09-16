@@ -12,6 +12,7 @@ int main(){
     setlocale(LC_ALL, "Portuguese");
     int valor;
     vector <int> lista;
+    vector <int> listacase6;
     double media = 0;
     double media1 = 0;
 
@@ -23,6 +24,14 @@ int main(){
     double total = 0;
     double cont3;
     double contvezes = 0;
+    int cont5 = 0;
+    int valorAnt5;
+    int valorchecagem;
+    double media2 = 0;
+    double soma4 = 0;
+    double soma5 = 0;
+    int mediacase5;
+    int valorescase5;
 
 
 
@@ -53,7 +62,7 @@ int main(){
 
         cin >> opcao;
 
-        //system("clear");
+        //system("clear"); n deu certo ;(
 
         //estrutura para modularizar a aplicação
         switch(opcao){
@@ -94,7 +103,7 @@ int main(){
         soma = 0;
 
         cout <<fixed <<setprecision(1);
-        cout << "imprimir a média" << endl;
+        cout << "A opção escolhida foi: imprimir a média" << endl;
 
             for(cont = 0 ; cont < lista.size() ; cont++){
                 soma += lista[cont];
@@ -102,8 +111,24 @@ int main(){
 
                 media = soma / cont;
 
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
 
-        cout << "A média dos elementos digitados é: " <<media <<endl;
+        cout << "*------------------------------------------------*" <<endl;
+
+
+        cout << "A média dos elementos digitados é: " << media <<endl;
+
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << "*------------------------------------------------*" <<endl;
+
 
         break;
 
@@ -175,6 +200,65 @@ int main(){
 
 
         break;
+
+
+
+    //----------------------------------------------------------------------------------------------------------------
+
+
+        case 5:
+
+
+        listacase6 = lista;
+        valorescase5 = 0;
+        mediacase5 = 0;
+        cont5 = 0;
+
+        sort(listacase6.begin(),listacase6.end());
+
+        do{
+
+            valorAnt5 = listacase6[cont5];
+            cont5++;
+
+            if (valorAnt5 != listacase6[cont5]){
+
+                cont5--;
+                valorescase5 = valorescase5 + listacase6[cont5];
+                cont5++;
+            }
+
+        }while (cont5 < listacase6.size());
+
+        mediacase5 = valorescase5 / cont5;
+
+
+
+        cout << "*------------------------------------------------*" <<endl;
+
+        cout << endl << endl << endl << endl << endl;
+
+        cout << "voce escolheu a opcao: substituir por zero todos os valores repetidos e imprimir a média e o somatório" <<endl;
+
+        cout << endl << endl << endl << endl << endl;
+
+        cout << "*------------------------------------------------*" <<endl;
+
+        cout << "Sua média ficou: " << mediacase5 <<endl;
+
+        cout << "Seu somatorio ficou: " << valorescase5 <<endl;
+
+        cout << endl << endl << endl << endl << endl;
+
+        cout << "*------------------------------------------------*" <<endl;
+
+        break;
+
+
+
+
+     //----------------------------------------------------------------------------------------------
+
 
 
         case 6:
