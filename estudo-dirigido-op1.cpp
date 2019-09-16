@@ -35,18 +35,23 @@ int main(){
 
 
 
+    cout << "Seja bem vindo(a) ao programa do Laurentino e Sgobero!!!" <<endl <<endl;
+    cout << "Para iniciar, ";
     do{
 
         //algoritmo pra completar a lista
-        cout << "Digite um valor: ";
+        cout << "Digite um valor: " <<endl;
         cin >> valor;
-
         lista.push_back(valor);
-
-        cout << "Deseja sair? (s ou n): " <<endl;
+        cout << endl;
+        cout << "Deseja parar de digitar? Digite *p* para parar ou *c* para continuar digitando: " <<endl;
         cin >> decisao;
 
-    } while(decisao != "s");
+    } while(decisao != "p");
+
+        cout << endl;
+        cout << "*------------------------------------------------*" <<endl;
+
 
 
     do {
